@@ -38,7 +38,6 @@ job "imageserver" {
                     ALLOWED_TOKENS={{.Data.data.allowed_tokens}}
                     USE_HTTPS={{.Data.data.use_https}}
                     URL_PREFIX={{.Data.data.url_prefix}}
-                    tz={{.Data.data.timezone}}
                     {{ end }}
                 EOF
                 destination = "local/env"
