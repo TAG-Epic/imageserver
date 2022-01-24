@@ -12,3 +12,5 @@ There should be a few config variables at the top. Change these as follows:
 `IMAGE_SERVER` - The image server to sign at. This should include http/https://  
 `SKYNET_PORTAL` - The skynet portal to upload images to.
 `LOGIN_TOKEN` - A user token from the server's list of `ALLOWED_TOKENS`
+
+You also have to install `requests clipboard siaskynet notify-py` for the client to work

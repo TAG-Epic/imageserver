@@ -3,7 +3,6 @@ import requests
 import os
 from subprocess import Popen, PIPE
 import clipboard
-from siaskynet import SkynetClient
 from notifypy import Notify
 
 # Config
