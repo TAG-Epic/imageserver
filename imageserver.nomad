@@ -1,4 +1,5 @@
 job "imageserver" {
+    datacenters = ["dc1"]
     group "imageserver" {
         network {
             port "webserver" {
@@ -12,7 +13,7 @@ job "imageserver" {
             check {
                 name     = "alive"
                 type     = "http"
-                path     = "/"
+                path     = "/health"
                 interval = "10s"
                 timeout  = "2s"
             }
@@ -21,7 +22,7 @@ job "imageserver" {
             driver = "docker"
 
             config {
-                image = "ghcr.io/tag-epic/imageserver/imageserver"
+                image = "ghcr.io/tag-epic/imageserver/imageserver:2280def3b9e67563d70a76452455b5b4c37c43a4"
 
                 ports = ["webserver"]
             }
