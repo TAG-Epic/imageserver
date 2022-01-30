@@ -45,7 +45,7 @@ def upload_image(request: Request, image_id: str):
 
     # Output
     origin = request.headers["Host"]
-    url = f"{protocol}://{origin}/{url_prefix}/{image_code}.png"
+    url = f"{protocol}://{origin}{url_prefix}/{image_code}.png"
     return {"image": url}
 
 @app.get("/health")
